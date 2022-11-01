@@ -11,6 +11,7 @@ import Card from '../components/Card';
 
 //Data
 import foods from '../consts/foods';
+import colors from '../consts/colors';
 
 const HomeScreen = ({navigation}) => {
   return (
@@ -84,7 +85,7 @@ const styles = StyleSheet.create({
       width: 50,
       height: 50,
       marginLeft: 10,
-      backgroundColor: Colors.primary,
+      backgroundColor: colors.red,
       borderRadius: 10,
       justifyContent: 'center',
       alignItems: 'center'

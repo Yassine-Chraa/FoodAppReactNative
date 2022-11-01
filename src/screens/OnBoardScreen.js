@@ -1,9 +1,10 @@
 import React from 'react';
 import {StyleSheet, Text, View, Image} from 'react-native';
-import {Colors} from 'react-native/Libraries/NewAppScreen';
 
 import {SafeAreaView} from 'react-native-safe-area-context';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
 import Button from '../components/Button';
+import colors from '../consts/colors';
 
 const OnBoardScreen = ({navigation}) => {
   return (
@@ -74,7 +75,7 @@ const styles = StyleSheet.create({
           height: 12,
           width: 30,
           borderRadius: 10,
-          backgroundColor: '#e44',
+          backgroundColor: colors.red,
           marginHorizontal: 5,
         },
         indicator: {
@@ -82,7 +83,7 @@ const styles = StyleSheet.create({
           width: 12,
           overflow: 'hidden',
           borderRadius: 60,
-          backgroundColor: '#e44',
+          backgroundColor: colors.red,
           marginHorizontal: 5,
         },
       },

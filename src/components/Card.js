@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import colors from '../consts/colors';
 
 //Get screen width
 const {width} = Dimensions.get('screen');
@@ -25,8 +26,8 @@ const Card = ({food,navigation}) => {
           <Image source={food.image} style={{height: 120, width: 120}} />
         </View>
         <View style={{marginHorizontal: 20}}>
-          <Text style={{fontSize: 18, fontWeight: 'bold'}}>{food.name}</Text>
-          <Text style={{fontSize: 14, color: '#444', marginTop: 2}}>
+          <Text style={{color: '#000',fontSize: 18, fontWeight: 'bold'}}>{food.name}</Text>
+          <Text style={{color: '#1e5128',fontSize: 14,marginTop: 2,fontWeight:'500'}}>
             {food.ingredients}
           </Text>
         </View>
@@ -37,7 +38,7 @@ const Card = ({food,navigation}) => {
             flexDirection: 'row',
             justifyContent: 'space-between',
           }}>
-          <Text style={{fontSize: 18, fontWeight: 'bold'}}>${food.price}</Text>
+          <Text style={{color: '#000',fontSize: 18, fontWeight: 'bold'}}>${food.price}</Text>
           <View style={styles.addToCartBtn}>
             <Icon name="add" size={20} color={Colors.white} />
           </View>
@@ -62,7 +63,7 @@ const styles = StyleSheet.create({
     height: 30,
     width: 30,
     borderRadius: 20,
-    backgroundColor: Colors.primary,
+    backgroundColor: colors.red,
     justifyContent: 'center',
     alignItems: 'center',
   }

@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import categories from '../consts/categories';
+import colors from '../consts/colors';
 
 const ListCategories = () => {
   const [selectedCategoryIndex, setSelectedCategoryIndex] = React.useState(0);
@@ -26,7 +27,7 @@ const ListCategories = () => {
           <View
             style={{
               backgroundColor:
-                selectedCategoryIndex == ind ? Colors.primary : '#e4e',
+                selectedCategoryIndex == ind ? colors.red : colors.blue,
               ...styles.categoryBtn,
             }}>
             <View style={styles.categoryBtn.image}>
@@ -40,7 +41,7 @@ const ListCategories = () => {
                 fontSize: 15,
                 fontWeight: 'bold',
                 marginLeft: 10,
-                color: selectedCategoryIndex == ind ? Colors.white : '#222',
+                color: Colors.white
               }}>
               {category.name}
             </Text>

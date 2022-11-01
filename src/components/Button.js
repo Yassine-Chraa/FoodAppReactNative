@@ -1,18 +1,19 @@
 import React from 'react';
 import {TouchableOpacity, Text, View, StyleSheet} from 'react-native';
-import {Colors} from 'react-native/Libraries/NewAppScreen';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
+import colors from '../consts/colors';
 const Button = ({title,type, onPress = () => {}}) => {
   return (
     <TouchableOpacity activeOpacity={0.8} onPress={onPress}>
       <View
         style={{
           ...styles.btnContainer,
-          backgroundColor: type == 'primary' ? Colors.primary : '#dd4444',
+          backgroundColor: type == 'primary' ? colors.red : Colors.white,
         }}>
         <Text
           style={{
             ...styles.title,
-            color: type == 'primary' ? Colors.white : Colors.white,
+            color: type == 'primary' ? '#fff' : colors.red,
           }}>
           {title}
         </Text>

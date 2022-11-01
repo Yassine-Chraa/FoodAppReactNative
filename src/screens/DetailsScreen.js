@@ -5,32 +5,45 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import Button from '../components/Button';
+import colors from '../consts/colors';
 
-const DetailsScreen = ({navigation,route}) => {
+const DetailsScreen = ({navigation, route}) => {
   const food = route.params;
   return (
     <SafeAreaView style={{backgroundColor: Colors.white}}>
       <View style={styles.header}>
-        <Icon name="arrow-back-ios" size={28} onPress={navigation.goBack} />
-        <Text style={{fontSize: 20, fontWeight: 'bold'}}>Details</Text>
+        <Icon
+          name="arrow-back-ios"
+          size={28}
+          color={'#000'}
+          onPress={navigation.goBack}
+        />
+        <Text style={{color: '#000', fontSize: 20, fontWeight: 'bold'}}>
+          Details
+        </Text>
       </View>
       <ScrollView>
-        <View style={{justifyContent: 'center', alignItems: 'center',paddingVertical: 30}}>
-          <Image
-            source={food.image}
-            style={{width: 220, height: 220}}
-          />
+        <View
+          style={{
+            justifyContent: 'center',
+            alignItems: 'center',
+            paddingVertical: 30,
+          }}>
+          <Image source={food.image} style={{width: 220, height: 220}} />
         </View>
         <View style={styles.details}>
-          <View style={{ flexDirection: 'row',
+          <View
+            style={{
+              flexDirection: 'row',
               justifyContent: 'space-between',
-              alignItems: 'center',}}>
+              alignItems: 'center',
+            }}>
             <Text
               style={{fontSize: 25, fontWeight: 'bold', color: Colors.white}}>
               {food.name}
             </Text>
             <View style={styles.iconContainer}>
-              <Icon name="favorite-border" color={Colors.primary} size={25} />
+              <Icon name="favorite-border" color={colors.red} size={25} />
             </View>
           </View>
           <Text style={styles.detailsText}>
@@ -41,7 +54,7 @@ const DetailsScreen = ({navigation,route}) => {
             only five centuries.
           </Text>
           <View style={{marginTop: 40, marginBottom: 40}}>
-            <Button title="Add To Cart" type='secondary' />
+            <Button title="Add To Cart" type="secondary" />
           </View>
         </View>
       </ScrollView>
@@ -56,7 +69,7 @@ const styles = StyleSheet.create({
     paddingVertical: 15,
     marginHorizontal: 20,
   },
-  iconContainer:{
+  iconContainer: {
     backgroundColor: Colors.white,
     height: 50,
     width: 50,
@@ -64,20 +77,20 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderRadius: 30,
   },
-  detailsText:{
+  detailsText: {
     color: Colors.white,
     marginTop: 10,
     lineHeight: 22,
     fontSize: 16,
   },
-  details:{
+  details: {
     paddingHorizontal: 20,
     paddingTop: 40,
     paddingBottom: 60,
-    backgroundColor: Colors.primary,
+    backgroundColor: colors.red,
     borderTopRightRadius: 40,
     borderTopLeftRadius: 40,
-  }
+  },
 });
 
 export default DetailsScreen;

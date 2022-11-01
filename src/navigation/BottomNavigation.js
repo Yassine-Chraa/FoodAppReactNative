@@ -5,6 +5,8 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import HomeScreen from '../screens/HomeScreen';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import CartScreen from '../screens/CartScreen';
+import colors from '../consts/colors';
+import FavoriteScreen from '../screens/FavoriteScreen';
 const Tab = createBottomTabNavigator();
 
 const BottomNavigation = ({navigation}) => {
@@ -18,7 +20,7 @@ const BottomNavigation = ({navigation}) => {
           elevation: 0,
         },
         tabBarShowLabel: false,
-        tabBarActiveTintColor: Colors.primary,
+        tabBarActiveTintColor: colors.red,
       }}>
       <Tab.Screen
         name="Home"
@@ -30,40 +32,8 @@ const BottomNavigation = ({navigation}) => {
         }}
       />
       <Tab.Screen
-        name="LocalMall"
-        component={HomeScreen}
-        options={{
-          tabBarIcon: ({color}) => (
-            <Icon name="local-mall" color={color} size={28} />
-          ),
-        }}
-      />
-      <Tab.Screen
-        name="Search"
-        component={HomeScreen}
-        options={{
-          tabBarIcon: ({color}) => (
-            <View
-              style={{
-                height:50,
-                width: 50,
-                justifyContent: 'center',
-                alignItems: 'center',
-                backgroundColor: Colors.white,
-                borderColor: Colors.primary,
-                borderWidth: 2,
-                borderRadius: 30,
-                top: -25,
-                elevation: 5,
-              }}>
-              <Icon name="search" color={Colors.primary} size={28} />
-            </View>
-          ),
-        }}
-      />
-      <Tab.Screen
         name="Favorite"
-        component={HomeScreen}
+        component={FavoriteScreen}
         options={{
           tabBarIcon: ({color}) => (
             <Icon name="favorite" color={color} size={28} />

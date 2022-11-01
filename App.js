@@ -1,6 +1,5 @@
 import React from 'react';
 import {StyleSheet, StatusBar} from 'react-native';
-import {Colors} from 'react-native/Libraries/NewAppScreen';
 //React native navigation
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
@@ -9,6 +8,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import OnBoardScreen from './src/screens/OnBoardScreen';
 import BottomNavigation from './src/navigation/BottomNavigation';
 import DetailsScreen from './src/screens/DetailsScreen';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
 
 const Stack = createNativeStackNavigator();
 const App = () => {

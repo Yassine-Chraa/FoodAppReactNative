@@ -2,6 +2,7 @@ import React from 'react';
 import { Text, View, StyleSheet, Image} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
+import colors from '../consts/colors';
 const CartCard = ({food}) => {
   return (
     <View style={styles.cartCard}>
@@ -13,11 +14,11 @@ const CartCard = ({food}) => {
             paddingVertical: 20,
             flex: 1,
           }}>
-          <Text style={{fontWeight: 'bold', fontSize: 16}}>{food.name}</Text>
-          <Text style={{fontSize: 13, color: Colors.grey}}>
+          <Text style={{color: '#000',fontWeight: 'bold', fontSize: 16}}>{food.name}</Text>
+          <Text style={{fontSize: 13, color: '#1e5128',fontWeight: '500'}}>
             {food.ingredients}
           </Text>
-          <Text style={{fontSize: 17, fontWeight: 'bold'}}>${food.price}</Text>
+          <Text style={{color: '#000',fontSize: 17, fontWeight: 'bold'}}>${food.price}</Text>
         </View>
         <View style={{marginRight: 20, alignItems: 'center'}}>
           <Text style={{fontWeight: 'bold', fontSize: 18}}>3</Text>
@@ -42,7 +43,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 10,
     },
     actionBtn:{
-        backgroundColor: Colors.primary,
+        backgroundColor: colors.red,
         borderRadius: 16,
         paddingHorizontal: 12,
         paddingVertical: 3,
