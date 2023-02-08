@@ -21,7 +21,7 @@ const FavoriteScreen = ({navigation}) => {
           name="arrow-back-ios"
           color={'#000'}
           size={28}
-          onPress={navigation.goBack}
+          onPress={navigation.goBack()}
         />
         <Text style={{color: '#000', fontSize: 20, fontWeight: 'bold'}}>
           Favorite

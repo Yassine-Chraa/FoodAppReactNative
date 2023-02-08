@@ -16,7 +16,7 @@ const DetailsScreen = ({navigation, route}) => {
           name="arrow-back-ios"
           size={28}
           color={'#000'}
-          onPress={navigation.goBack}
+          onPress={navigation.goBack()}
         />
         <Text style={{color: '#000', fontSize: 20, fontWeight: 'bold'}}>
           Details

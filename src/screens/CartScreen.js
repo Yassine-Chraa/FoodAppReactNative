@@ -9,7 +9,7 @@ const CartScreen = ({navigation}) => {
   return (
     <SafeAreaView>
       <View style={styles.header}>
-        <Icon name="arrow-back-ios" size={28} color={'#000'} onPress={navigation.goBack} />
+        <Icon name="arrow-back-ios" size={28} color={'#000'} onPress={navigation.goBack()} />
         <Text style={{color: '#000',fontSize: 20, fontWeight: 'bold'}}>Cart</Text>
       </View>
       <FlatList
